@@ -35,7 +35,7 @@ export default function Property() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop)",
+              "url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1800&auto=format&fit=crop)",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/90 to-white" />
@@ -53,8 +53,7 @@ export default function Property() {
 
           <p className="max-w-3xl mx-auto text-base sm:text-lg text-brandBlue/80 mb-10">
             Structured real estate solutions focused on predictable rental
-            income, long-term capital appreciation, and professionally managed
-            exit strategies.
+            income, capital appreciation, and professionally managed exits.
           </p>
 
           <Link
@@ -69,6 +68,7 @@ export default function Property() {
       {/* ================= ADVISORY ================= */}
       <section className="px-4 sm:px-6 py-28">
         <div className="max-w-6xl mx-auto">
+
           <motion.h2 {...fadeUp} className="text-3xl sm:text-4xl font-black mb-20 text-center">
             Real Estate Advisory & Management
           </motion.h2>
@@ -84,33 +84,51 @@ export default function Property() {
               {
                 icon: Home,
                 title: "Property Sale Advisory",
+                image:
+                  "https://media.istockphoto.com/id/1409298953/photo/real-estate-agents-shake-hands-after-the-signing-of-the-contract-agreement-is-complete.webp?a=1&b=1&s=612x612&w=0&k=20&c=IlUK1X_LKI-HU8APW7XbKHiFx0B122NKETS9prbQYGE=",
                 desc:
-                  "Strategic advisory to sell residential and commercial assets at optimal market value with complete documentation and negotiation support.",
+                  "Strategic advisory to sell residential and commercial assets at optimal market value with negotiation and documentation support.",
               },
               {
                 icon: Building2,
                 title: "Property Purchase Advisory",
+                image:
+                  "https://media.istockphoto.com/id/2199765063/photo/senior-couple-meeting-with-financial-advisor-stock-photo.webp?a=1&b=1&s=612x612&w=0&k=20&c=WyZ_ryGKHphUiOmIhzHvjqea_4Ki-Cndq3XZHWzmMYU=",
                 desc:
-                  "Expert guidance to acquire rental-yielding and appreciation-driven properties aligned with your investment goals.",
+                  "Expert guidance to acquire rental-yielding and appreciation-driven properties aligned with your goals.",
               },
               {
                 icon: Key,
                 title: "Rental Income Solutions",
+                image:
+                  "https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1200&auto=format&fit=crop",
                 desc:
-                  "Curated income-generating properties delivering stable monthly cash flow with long-term capital growth.",
+                  "Curated income-generating assets delivering stable monthly cash flow.",
               },
             ].map((item, i) => (
               <motion.div
                 key={i}
                 variants={fadeUp}
-                whileHover={{ y: -8, scale: 1.02 }}
-                className="bg-white border rounded-[2.5rem] p-8 sm:p-12 shadow-sm hover:shadow-2xl transition"
+                whileHover={{ y: -8 }}
+                className="group rounded-[2.5rem] overflow-hidden border bg-white shadow-sm hover:shadow-2xl transition"
               >
-                <item.icon className="text-brandGold mb-6" size={42} />
-                <h3 className="text-xl font-bold mb-4">{item.title}</h3>
-                <p className="text-brandBlue/80 text-sm sm:text-base">
-                  {item.desc}
-                </p>
+                {/* Image */}
+                <div className="h-44 overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                  />
+                </div>
+
+                {/* Content */}
+                <div className="p-8 sm:p-10">
+                  <item.icon className="text-brandGold mb-4" size={40} />
+                  <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                  <p className="text-brandBlue/80 text-sm sm:text-base">
+                    {item.desc}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -118,62 +136,51 @@ export default function Property() {
       </section>
 
       {/* ================= RENTAL FOCUS ================= */}
-      <section className="relative px-4 sm:px-6 py-32 bg-brandBlue text-white">
-        <div className="max-w-6xl mx-auto">
+      <section
+        className="relative px-4 sm:px-6 py-32 bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url(https://images.unsplash.com/photo-1523217582562-09d0def993a6?q=80&w=1800&auto=format&fit=crop)",
+        }}
+      >
+        <div className="absolute inset-0 bg-brandBlue/90" />
+
+        <div className="relative max-w-6xl mx-auto text-white">
           <motion.h2 {...fadeUp} className="text-3xl sm:text-4xl font-black mb-20 text-center">
             Rental Income Focused Properties
           </motion.h2>
 
-          <motion.div
-            variants={stagger}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 text-center"
-          >
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 text-center">
             {[
-              {
-                value: "Up to 10% P.A.",
-                text: "Stable Monthly Rental Yield",
-              },
-              {
-                value: "Residential & Commercial",
-                text: "Income Generating Assets",
-              },
-              {
-                value: "Fully Managed",
-                text: "Tenant, Lease & Maintenance",
-              },
-            ].map((item, i) => (
+              "Up to 10% P.A. Rental Yield",
+              "Residential & Commercial Assets",
+              "End-to-End Property Management",
+            ].map((text, i) => (
               <motion.div
                 key={i}
-                variants={fadeUp}
+                {...fadeUp}
+                transition={{ delay: i * 0.1 }}
                 className="bg-white/10 backdrop-blur border border-white/20 p-10 rounded-2xl"
               >
-                <p className="text-brandGold text-3xl sm:text-4xl font-black mb-3">
-                  {item.value}
+                <p className="text-brandGold text-3xl font-black mb-3">
+                  {text.split(" ")[0]}
                 </p>
-                <p className="font-semibold">{item.text}</p>
+                <p className="font-semibold">{text}</p>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* ================= ASSURED EXIT ================= */}
       <section className="px-4 sm:px-6 py-28">
         <div className="max-w-6xl mx-auto">
+
           <motion.h2 {...fadeUp} className="text-3xl sm:text-4xl font-black mb-16 text-center">
             Assured Exit Strategy
           </motion.h2>
 
-          <motion.p {...fadeUp} className="max-w-4xl mx-auto text-center text-brandBlue/80 mb-20">
-            Every property investment is structured with predefined exit
-            timelines ensuring liquidity, capital appreciation, and risk
-            mitigation.
-          </motion.p>
-
-          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 text-center">
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { roi: "15–20%", year: "Exit After 1st Year" },
               { roi: "20–30%", year: "Exit After 2nd Year" },
@@ -182,25 +189,27 @@ export default function Property() {
               <motion.div
                 key={i}
                 {...fadeUp}
-                transition={{ delay: i * 0.1 }}
                 whileHover={{ y: -8 }}
-                className="bg-white border rounded-[2.5rem] p-10 shadow-sm hover:shadow-xl transition"
+                className="rounded-[2.5rem] overflow-hidden border shadow-sm hover:shadow-xl transition"
               >
-                <Landmark className="mx-auto text-brandGold mb-6" size={42} />
-                <p className="text-brandGold text-4xl font-black mb-3">
-                  {item.roi}
-                </p>
-                <p className="font-semibold">{item.year}</p>
-                <p className="text-brandBlue/70 mt-2">
-                  Planned appreciation with defined liquidity
-                </p>
+                <img
+                  src="https://images.unsplash.com/photo-1618044733300-9472054094ee?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8QXNzdXJlZFN0cmF0ZWd5JTIwZmluYW5jZXxlbnwwfHwwfHx8MA%3D%3D"
+                  alt="Exit Strategy"
+                  className="h-40 w-full object-cover"
+                />
+                <div className="p-8 text-center">
+                  <p className="text-brandGold text-2xl font-black mb-2">
+                    {item.roi}
+                  </p>
+                  <p className="font-semibold">{item.year}</p>
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ================= TRANSPARENCY ================= */}
+            {/* ================= TRANSPARENCY ================= */}
       <section className="px-4 sm:px-6 py-28 bg-softGold/30">
         <div className="max-w-6xl mx-auto">
           <motion.h2 {...fadeUp} className="text-3xl sm:text-4xl font-black mb-20 text-center">
@@ -245,34 +254,22 @@ export default function Property() {
 
       {/* ================= CTA ================= */}
       <section className="px-4 sm:px-6 py-32 text-center">
-        <motion.div {...fadeUp} className="max-w-4xl mx-auto bg-gradient-to-br from-softGold/40 to-white p-10 sm:p-16 rounded-[3rem] border border-brandGold/20 shadow-xl">
+        <motion.div {...fadeUp} className="max-w-4xl mx-auto bg-gradient-to-br from-softGold/40 to-white p-12 sm:p-16 rounded-[3rem] border border-brandGold/20 shadow-xl">
           <h2 className="text-3xl sm:text-4xl font-black mb-6">
-            Invest in Property with{" "}
-            <span className="text-brandGold">Confidence</span>
+            Invest in Property with <span className="text-brandGold">Confidence</span>
           </h2>
           <p className="text-base sm:text-lg text-brandBlue/70 mb-10">
-            Access professionally managed property opportunities with rental
-            income, capital growth, and assured exit strategies.
+            Rental income, capital growth, and professionally managed exits —
+            all under one transparent ecosystem.
           </p>
 
           <Link
             to="/contact"
             className="inline-flex items-center gap-3 bg-brandBlue text-white px-12 py-4 rounded-full text-lg font-semibold hover:-translate-y-1 hover:shadow-2xl transition"
           >
-            Connect Now<ArrowRight />
+            Connect Now <ArrowRight />
           </Link>
         </motion.div>
-      </section>
-
-      {/* ================= DISCLAIMER ================= */}
-      <section className="px-6 py-10">
-        <div className="max-w-5xl mx-auto text-center text-sm text-brandBlue/60">
-          <p>
-            *Property investments are subject to market conditions, legal due
-            diligence, and regulatory approvals. Returns are indicative and may
-            vary.
-          </p>
-        </div>
       </section>
 
     </main>

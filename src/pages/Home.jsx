@@ -176,74 +176,97 @@ className="relative min-h-[95vh] flex items-center px-6 py-20 bg-gradient-to-br 
     </motion.div>
 
     {/* ================= CARDS ================= */}
-    <div className="grid gap-10 md:grid-cols-3">
+{/* ================= CARDS ================= */}
+<div className="grid gap-10 md:grid-cols-3">
 
-      {[
-        {
-          icon: Wallet,
-          title: "Finance Solutions",
-          desc: "Structured funding tailored to personal, business, and project needs.",
-          points: [
-            "Secured & unsecured loans",
-            "Land & property backed finance",
-            "Business & project funding",
-          ],
-        },
-        {
-          icon: TrendingUp,
-          title: "Investment Opportunities",
-          desc: "High-performance investments backed by tangible assets.",
-          points: [
-            "20–40% ROI strategies",
-            "Short & long-term options",
-            "Asset-backed investments",
-          ],
-        },
-        {
-          icon: Building2,
-          title: "Property Advisory",
-          desc: "Professionally managed real estate with assured exits.",
-          points: [
-            "Rental income assets",
-            "Assured exit strategies",
-            "End-to-end management",
-          ],
-        },
-      ].map((card, i) => (
-        <motion.div
-          key={i}
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: i * 0.15 }}
-          whileHover={{ y: -10 }}
-          className="group relative bg-white/70 backdrop-blur-xl rounded-[2.8rem] p-10 border shadow-lg hover:shadow-2xl transition"
-        >
-          {/* Icon Ring */}
-          <div className="w-16 h-16 flex items-center justify-center rounded-2xl mb-8 bg-gradient-to-br from-brandGold/20 to-brandGold/5 group-hover:scale-110 transition">
-            <card.icon className="text-brandGold" size={34} />
-          </div>
+  {[
+    {
+      icon: Wallet,
+      title: "Finance Solutions",
+      desc: "Structured funding tailored to personal, business, and project needs.",
+      image:
+        "https://images.unsplash.com/photo-1554224154-26032ffc0d07?q=80&w=1200&auto=format&fit=crop",
+      points: [
+        "Secured & unsecured loans",
+        "Land & property backed finance",
+        "Business & project funding",
+      ],
+    },
+    {
+      icon: TrendingUp,
+      title: "Investment Opportunities",
+      desc: "High-performance investments backed by tangible assets.",
+      image:
+        "https://images.unsplash.com/photo-1642790106117-e829e14a795f?q=80&w=1200&auto=format&fit=crop",
+      points: [
+        "20–40% ROI strategies",
+        "Short & long-term options",
+        "Asset-backed investments",
+      ],
+    },
+    {
+      icon: Building2,
+      title: "Property Advisory",
+      desc: "Professionally managed real estate with assured exits.",
+      image:
+        "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop",
+      points: [
+        "Rental income assets",
+        "Assured exit strategies",
+        "End-to-end management",
+      ],
+    },
+  ].map((card, i) => (
+    <motion.div
+      key={i}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, delay: i * 0.15 }}
+      whileHover={{ y: -8 }}
+      className="group bg-white rounded-[2.5rem] overflow-hidden border shadow-md hover:shadow-2xl transition"
+    >
+      {/* IMAGE */}
+      <div className="relative h-52 overflow-hidden">
+        <img
+          src={card.image}
+          alt={card.title}
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+        />
 
-          <h3 className="text-2xl font-bold mb-3">{card.title}</h3>
+        {/* Image overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
 
-          <p className="text-brandBlue/70 mb-6">
-            {card.desc}
-          </p>
+        {/* Icon on image */}
+        <div className="absolute bottom-4 left-4 w-14 h-14 rounded-2xl bg-white/90 flex items-center justify-center shadow-lg">
+          <card.icon className="text-brandGold" size={28} />
+        </div>
+      </div>
 
-          <ul className="space-y-3 text-brandBlue/75">
-            {card.points.map((p, idx) => (
-              <li key={idx} className="flex gap-3">
-                <CheckCircle2 className="text-brandGold mt-1" size={18} />
-                {p}
-              </li>
-            ))}
-          </ul>
+      {/* CONTENT BELOW IMAGE */}
+      <div className="p-10">
+        <h3 className="text-2xl font-bold mb-3">
+          {card.title}
+        </h3>
 
-          {/* Hover Glow */}
-          <div className="absolute inset-0 rounded-[2.8rem] border border-transparent group-hover:border-brandGold/30 transition" />
-        </motion.div>
-      ))}
-    </div>
+        <p className="text-brandBlue/70 mb-6">
+          {card.desc}
+        </p>
+
+        <ul className="space-y-3 text-brandBlue/80">
+          {card.points.map((p, idx) => (
+            <li key={idx} className="flex gap-3">
+              <CheckCircle2 className="text-brandGold mt-1" size={18} />
+              {p}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </motion.div>
+  ))}
+</div>
+
+
   </div>
 </section>
 
@@ -386,7 +409,8 @@ className="relative min-h-[95vh] flex items-center px-6 py-20 bg-gradient-to-br 
 
 
  {/* ================= WHO WE SERVE ================= */}
-<section className="relative px-6 py-32 bg-brandBlue text-white overflow-hidden">
+{/* ================= WHO WE SERVE ================= */}
+<section className="relative px-4 sm:px-6 py-28 bg-brandBlue text-white overflow-hidden">
 
   {/* Decorative Elements */}
   <div className="absolute -top-20 left-1/3 w-96 h-96 bg-brandGold/10 blur-3xl rounded-full" />
@@ -400,7 +424,7 @@ className="relative min-h-[95vh] flex items-center px-6 py-20 bg-gradient-to-br 
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.9 }}
-      className="text-center mb-24"
+      className="text-center mb-20"
     >
       <span className="inline-block mb-4 px-6 py-2 text-sm font-semibold rounded-full bg-white/10 text-brandGold">
         OUR CLIENTS
@@ -412,27 +436,33 @@ className="relative min-h-[95vh] flex items-center px-6 py-20 bg-gradient-to-br 
 
       <p className="max-w-3xl mx-auto text-base sm:text-lg text-white/80">
         We partner with individuals and institutions seeking secure,
-        structured, and scalable growth.
+        structured, and scalable financial growth.
       </p>
     </motion.div>
 
     {/* Audience Cards */}
-    <div className="grid gap-10 md:grid-cols-3 text-center">
+    <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
       {[
         {
           icon: Users,
           label: "Individual Investors",
           desc: "Professionals & families building long-term wealth",
+          image:
+            "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop",
         },
         {
           icon: Briefcase,
           label: "Business Owners",
           desc: "Entrepreneurs seeking growth capital & expansion",
+          image:
+            "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1200&auto=format&fit=crop",
         },
         {
           icon: Landmark,
           label: "HNIs & Developers",
           desc: "Large-scale investors and real estate developers",
+          image:
+            "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1200&auto=format&fit=crop",
         },
       ].map((item, i) => (
         <motion.div
@@ -441,20 +471,35 @@ className="relative min-h-[95vh] flex items-center px-6 py-20 bg-gradient-to-br 
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: i * 0.15 }}
-          whileHover={{ y: -8 }}
-          className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-[2.5rem] p-10 hover:bg-white/10 transition"
+          whileHover={{ y: -10 }}
+          className="relative group rounded-[2.5rem] overflow-hidden border border-white/10 shadow-lg"
         >
-          <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-2xl bg-gradient-to-br from-brandGold/30 to-brandGold/10 group-hover:scale-110 transition">
-            <item.icon className="text-brandGold" size={34} />
-          </div>
+          {/* Background Image */}
+          <div
+            className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700"
+            style={{ backgroundImage: `url(${item.image})` }}
+          />
 
-          <p className="text-lg font-bold mb-2">{item.label}</p>
-          <p className="text-white/75 text-sm">{item.desc}</p>
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-brandBlue/95 via-brandBlue/70 to-brandBlue/40" />
+
+          {/* Content */}
+          <div className="relative p-10 text-center">
+            <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-2xl bg-gradient-to-br from-brandGold/40 to-brandGold/10 backdrop-blur group-hover:scale-110 transition">
+              <item.icon className="text-brandGold" size={34} />
+            </div>
+
+            <p className="text-xl font-bold mb-2">{item.label}</p>
+            <p className="text-white/80 text-sm leading-relaxed">
+              {item.desc}
+            </p>
+          </div>
         </motion.div>
       ))}
     </div>
   </div>
 </section>
+
 
 
 {/* ================= FAQ ================= */}

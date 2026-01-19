@@ -67,74 +67,114 @@ export default function Finance() {
         </motion.div>
       </section>
 
-      {/* ================= LOAN SOLUTIONS ================= */}
-      <section className="px-4 sm:px-6 py-28">
-        <div className="max-w-6xl mx-auto">
-          <motion.h2 {...fadeUp} className="text-3xl sm:text-4xl font-black mb-20 text-center">
-            Unsecured & Secured Loan Solutions
-          </motion.h2>
+{/* ================= LOAN SOLUTIONS ================= */}
+<section className="px-4 sm:px-6 py-28 bg-white">
+  <div className="max-w-6xl mx-auto">
 
-          <motion.div
-            variants={stagger}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="grid gap-10 sm:grid-cols-2"
-          >
-            {/* Unsecured */}
-            <motion.div
-              variants={fadeUp}
-              whileHover={{ y: -8, scale: 1.02 }}
-              className="bg-white border rounded-[2.5rem] p-8 sm:p-12 shadow-sm hover:shadow-2xl transition"
-            >
-              <div className="w-14 h-14 rounded-2xl bg-brandGold/15 flex items-center justify-center mb-6">
-                <Wallet className="text-brandGold" size={30} />
-              </div>
+    <motion.h2
+      {...fadeUp}
+      className="text-3xl sm:text-4xl font-black mb-20 text-center"
+    >
+      Unsecured & Secured Loan Solutions
+    </motion.h2>
 
-              <h3 className="text-xl sm:text-2xl font-bold mb-4">
-                Unsecured Loans
-              </h3>
+    <motion.div
+      variants={stagger}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      className="grid gap-10 sm:grid-cols-2"
+    >
 
-              <p className="text-brandBlue/80 mb-6 text-sm sm:text-base">
-                Hassle-free personal and business loans with minimal documentation
-                and fast disbursement.
-              </p>
+      {/* ================= UNSECURED ================= */}
+      <motion.div
+        variants={fadeUp}
+        whileHover={{ y: -8 }}
+        className="group bg-white border rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition"
+      >
+        {/* Image */}
+        <div className="relative h-52 overflow-hidden">
+          <img
+            src="https://media.istockphoto.com/id/827709914/photo/page-of-paper-with-words-unsecured-loans-and-glasses.webp?a=1&b=1&s=612x612&w=0&k=20&c=tc6RnFeVj6WHazyfJTvPHh5kfKw9yyzp7XyHc6z6Ko0="
+            alt="Unsecured Loan"
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
 
-              <ul className="space-y-3 text-brandBlue/80 text-sm sm:text-base">
-                <li>• Loan up to <span className="font-semibold text-brandGold">₹10 Lakhs</span></li>
-                <li>• No collateral required</li>
-                <li>• Tenure up to <span className="font-semibold">7 years</span></li>
-              </ul>
-            </motion.div>
-
-            {/* Secured */}
-            <motion.div
-              variants={fadeUp}
-              whileHover={{ y: -8, scale: 1.02 }}
-              className="bg-white border rounded-[2.5rem] p-8 sm:p-12 shadow-sm hover:shadow-2xl transition"
-            >
-              <div className="w-14 h-14 rounded-2xl bg-brandGold/15 flex items-center justify-center mb-6">
-                <ShieldCheck className="text-brandGold" size={30} />
-              </div>
-
-              <h3 className="text-xl sm:text-2xl font-bold mb-4">
-                Secured / Business Loans
-              </h3>
-
-              <p className="text-brandBlue/80 mb-6 text-sm sm:text-base">
-                Structured funding for startups, enterprises, and large-scale
-                projects with flexible security models.
-              </p>
-
-              <ul className="space-y-3 text-brandBlue/80 text-sm sm:text-base">
-                <li>• Funding from <span className="font-semibold text-brandGold">₹10 Lakhs – ₹10 Crores</span></li>
-                <li>• Custom deal structuring</li>
-                <li>• Faster approvals</li>
-              </ul>
-            </motion.div>
-          </motion.div>
+          {/* Icon */}
+          <div className="absolute bottom-4 left-4 w-14 h-14 rounded-2xl bg-white/90 flex items-center justify-center shadow-lg">
+            <Wallet className="text-brandGold" size={28} />
+          </div>
         </div>
-      </section>
+
+        {/* Content */}
+        <div className="p-8 sm:p-12">
+          <h3 className="text-xl sm:text-2xl font-bold mb-4">
+            Unsecured Loans
+          </h3>
+
+          <p className="text-brandBlue/80 mb-6 text-sm sm:text-base">
+            Hassle-free personal and business loans with minimal documentation
+            and fast disbursement.
+          </p>
+
+          <ul className="space-y-3 text-brandBlue/80 text-sm sm:text-base">
+            <li>• Loan up to <span className="font-semibold text-brandGold">₹10 Lakhs</span></li>
+            <li>• No collateral required</li>
+            <li>• Tenure up to <span className="font-semibold">7 years</span></li>
+          </ul>
+        </div>
+      </motion.div>
+
+      {/* ================= SECURED ================= */}
+      <motion.div
+        variants={fadeUp}
+        whileHover={{ y: -8 }}
+        className="group bg-white border rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition"
+      >
+        {/* Image */}
+        <div className="relative h-52 overflow-hidden">
+          <img
+            src="https://media.istockphoto.com/id/1226786654/photo/loan-bags-on-a-laptop.webp?a=1&b=1&s=612x612&w=0&k=20&c=rVTDwfOSglyF2i3PzWRmjbSAs8a67Ak-jgLVFHbk-Yk="
+            alt="Secured Business Loan"
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
+
+          {/* Icon */}
+          <div className="absolute bottom-4 left-4 w-14 h-14 rounded-2xl bg-white/90 flex items-center justify-center shadow-lg">
+            <ShieldCheck className="text-brandGold" size={28} />
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="p-8 sm:p-12">
+          <h3 className="text-xl sm:text-2xl font-bold mb-4">
+            Secured / Business Loans
+          </h3>
+
+          <p className="text-brandBlue/80 mb-6 text-sm sm:text-base">
+            Structured funding for startups, enterprises, and large-scale
+            projects with flexible security models.
+          </p>
+
+          <ul className="space-y-3 text-brandBlue/80 text-sm sm:text-base">
+            <li>
+              • Funding from{" "}
+              <span className="font-semibold text-brandGold">
+                ₹10 Lakhs – ₹10 Crores
+              </span>
+            </li>
+            <li>• Custom deal structuring</li>
+            <li>• Faster approvals</li>
+          </ul>
+        </div>
+      </motion.div>
+
+    </motion.div>
+  </div>
+</section>
+
 
       {/* ================= PROJECT FINANCE ================= */}
       <section className="relative px-4 sm:px-6 py-32 bg-brandBlue text-white">
@@ -180,44 +220,116 @@ export default function Finance() {
         </div>
       </section>
 
-      {/* ================= LAND & PROPERTY FINANCE ================= */}
-      <section className="px-4 sm:px-6 py-28">
-        <div className="max-w-6xl mx-auto">
-          <motion.h2 {...fadeUp} className="text-3xl sm:text-4xl font-black mb-16 text-center">
-            Land & Property Based Finance
-          </motion.h2>
+ {/* ================= LAND & PROPERTY FINANCE ================= */}
+<section className="relative px-4 sm:px-6 py-28 bg-softGold/10 overflow-hidden">
 
-          <motion.div
-            variants={stagger}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3"
-          >
-            {[
-              { title: "Agricultural Land", percent: "Up to 50%" },
-              { title: "Residential Property", percent: "Up to 60%" },
-              { title: "Commercial Property", percent: "Up to 70%" },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                variants={fadeUp}
-                whileHover={{ scale: 1.03 }}
-                className="border rounded-[2.5rem] p-10 text-center shadow-sm hover:shadow-xl transition"
-              >
-                <Landmark className="mx-auto text-brandGold mb-6" size={38} />
-                <h3 className="text-lg sm:text-xl font-bold mb-3">{item.title}</h3>
-                <div className="text-4xl sm:text-5xl font-black text-brandGold mb-3">
-                  {item.percent}
-                </div>
-                <p className="text-sm text-brandBlue/70">
-                  Based on Government Ready Reckoner Rate
-                </p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+  {/* Decorative Glow */}
+  <div className="absolute -top-24 right-10 w-96 h-96 bg-brandGold/20 blur-3xl rounded-full" />
+  <div className="absolute bottom-0 left-10 w-72 h-72 bg-brandBlue/10 blur-3xl rounded-full" />
+
+  <div className="relative max-w-6xl mx-auto">
+
+    {/* Header */}
+    <motion.div
+      {...fadeUp}
+      className="text-center mb-20"
+    >
+      <span className="inline-block mb-4 px-6 py-2 text-sm font-semibold rounded-full bg-brandGold/15 text-brandGold">
+        ASSET BACKED FINANCE
+      </span>
+
+      <h2 className="text-3xl sm:text-4xl font-black mb-4">
+        Land & Property Based Finance
+      </h2>
+
+      <p className="max-w-3xl mx-auto text-brandBlue/70 text-sm sm:text-base">
+        Unlock the true value of your land and property through structured,
+        legally compliant financing models.
+      </p>
+    </motion.div>
+
+    {/* Cards */}
+    <motion.div
+      variants={stagger}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3"
+    >
+      {[
+        {
+          title: "Agricultural Land",
+          percent: "Up to 50%",
+          image:
+            "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1200&auto=format&fit=crop",
+        },
+        {
+          title: "Residential Property",
+          percent: "Up to 60%",
+          image:
+            "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1200&auto=format&fit=crop",
+        },
+        {
+          title: "Commercial Property",
+          percent: "Up to 70%",
+          image:
+            "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop",
+        },
+      ].map((item, i) => (
+        <motion.div
+          key={i}
+          variants={fadeUp}
+          whileHover={{ y: -10 }}
+          className="group relative rounded-[2.8rem] overflow-hidden bg-white border shadow-sm hover:shadow-2xl transition"
+        >
+          {/* Image */}
+          <div className="relative h-48 overflow-hidden">
+            <img
+              src={item.image}
+              alt={item.title}
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+
+            {/* Icon */}
+            <div className="absolute bottom-4 left-4 w-14 h-14 rounded-2xl bg-white/90 flex items-center justify-center shadow-lg">
+              <Landmark className="text-brandGold" size={28} />
+            </div>
+          </div>
+
+          {/* Content */}
+          <div className="p-8 text-center">
+            <h3 className="text-lg sm:text-xl font-bold mb-3">
+              {item.title}
+            </h3>
+
+            <div className="text-1xl sm:text-2xl font-black text-brandGold mb-2">
+              {item.percent}
+            </div>
+
+            <p className="text-sm text-brandBlue/70">
+              Loan value calculated on Government Ready Reckoner Rate
+            </p>
+          </div>
+
+          {/* Hover Border */}
+          <div className="absolute inset-0 rounded-[2.8rem] border border-transparent group-hover:border-brandGold/30 transition" />
+        </motion.div>
+      ))}
+    </motion.div>
+
+    {/* Footer Note */}
+    <motion.p
+      {...fadeUp}
+      className="mt-16 text-center text-sm text-brandBlue/60"
+    >
+      *Final eligibility depends on legal verification, valuation reports,
+      and regulatory compliance.
+    </motion.p>
+
+  </div>
+</section>
+
 
       {/* ================= ASSET & TRADE FINANCE ================= */}
       <section className="px-4 sm:px-6 py-28 bg-softGold/30">
