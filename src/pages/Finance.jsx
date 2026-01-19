@@ -28,26 +28,46 @@ export default function Finance() {
     <main className="overflow-hidden bg-white text-brandBlue font-sans">
 
       {/* ================= HERO ================= */}
-      <section
-        className="relative px-6 py-32 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url(https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1600&auto=format&fit=crop)",
-        }}
-      >
-        <div className="absolute inset-0 bg-white/90" />
-        <motion.div {...fadeUp} className="relative max-w-5xl mx-auto text-center">
-          <h1 className="text-3xl sm:text-5xl font-black mb-6">
-            Smart & Structured{" "}
-            <span className="text-brandGold">Finance Solutions</span>
-          </h1>
-          <p className="max-w-3xl mx-auto text-lg text-brandBlue/80">
-            Tailor-made finance solutions designed for individuals,
-            entrepreneurs, and enterprises with speed, flexibility, and
-            complete transparency.
-          </p>
-        </motion.div>
-      </section>
+ {/* ================= HERO ================= */}
+<section className="relative px-4 sm:px-6 py-28 sm:py-36 overflow-hidden">
+  <div
+    className="absolute inset-0 bg-cover bg-center"
+    style={{
+      backgroundImage:
+        "url(https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1600&auto=format&fit=crop)",
+    }}
+  />
+  <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/90 to-white" />
+
+  <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1 }}
+    className="relative max-w-5xl mx-auto text-center"
+  >
+    <span className="inline-block mb-6 px-6 py-2 rounded-full bg-brandGold/15 text-brandGold text-sm font-semibold">
+      Finance • Loans • Structuring
+    </span>
+
+    <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight">
+      Smart & Structured{" "}
+      <span className="text-brandGold">Finance Solutions</span>
+    </h1>
+
+    <p className="max-w-3xl mx-auto text-base sm:text-lg text-brandBlue/80 mb-10">
+      Tailor-made funding solutions for individuals, entrepreneurs,
+      and enterprises — delivered with speed, transparency, and legal clarity.
+    </p>
+
+    <a
+      href="/investments"
+      className="inline-flex items-center gap-3 bg-brandBlue text-white px-10 py-4 rounded-full text-lg font-semibold hover:-translate-y-1 hover:shadow-xl transition"
+    >
+      Check Investments <ArrowRight />
+    </a>
+  </motion.div>
+</section>
+
 
       {/* ================= LOAN SOLUTIONS ================= */}
       <section className="px-6 py-32">

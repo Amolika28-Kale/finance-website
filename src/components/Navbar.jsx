@@ -15,13 +15,24 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 lg:px-8 py-4">
 
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3">
-          <img
-            src={logo}
-            alt="FIP Consultancy Logo"
-            className="h-11 w-auto"
-          />
-        </Link>
+{/* Logo */}
+<Link to="/" className="flex items-center gap-3">
+  <img
+    src={logo}
+    alt="FIP Consultancy Logo"
+    className="h-14 w-auto sm:h-16"
+  />
+
+  <div className="leading-tight">
+    <p className="text-xl sm:text-2xl font-black text-brandBlue tracking-wide">
+      FIP
+    </p>
+    <p className="text-sm sm:text-base font-semibold text-brandGold -mt-1">
+      Consultancy
+    </p>
+  </div>
+</Link>
+
 
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center gap-10 text-brandBlue">
