@@ -1,6 +1,7 @@
-
 export const projectsData = [
-  /* ===================== PLOTTING DIVISION ===================== */
+  /* =========================
+     PLOTTING DIVISION (14)
+  ========================= */
 
   {
     id: 1,
@@ -8,13 +9,7 @@ export const projectsData = [
     name: "Siddhivinayak Lake View I",
     areaSqFt: 400000,
     status: "Completed",
-    media: {
-      images: [
-        "/projects/lake-view-1/img1.jpg",
-        "/projects/lake-view-1/img2.jpg",
-      ],
-      brochure: "/projects/lake-view-1/brochure.pdf",
-    },
+    media: { images: [], brochure: "" },
   },
   {
     id: 2,
@@ -22,10 +17,7 @@ export const projectsData = [
     name: "Siddhivinayak Lake View II",
     areaSqFt: 300000,
     status: "Completed",
-    media: {
-      images: [],
-      brochure: "",
-    },
+    media: { images: [], brochure: "" },
   },
   {
     id: 3,
@@ -94,133 +86,324 @@ export const projectsData = [
   {
     id: 11,
     division: "Plotting",
+    name: "Shaashwat Sambhav Developers",
+    areaSqFt: 30000,
+    status: "Completed",
+    media: { images: [], brochure: "" },
+  },
+  {
+    id: 12,
+    division: "Plotting",
+    name: "Shree Siddhi Sambhav Developers",
+    areaSqFt: 290000,
+    status: "Completed",
+    media: { images: [], brochure: "" },
+  },
+  {
+    id: 13,
+    division: "Plotting",
+    name: "Saakshi Sambhav Platinum Developers",
+    areaSqFt: 360000,
+    status: "Completed",
+    media: { images: [], brochure: "" },
+  },
+  {
+    id: 14,
+    division: "Plotting",
     name: "Sunshree Vedas",
     areaSqFt: 4086000,
     status: "Completed",
     media: { images: [], brochure: "" },
   },
 
-  /* ===================== CONSTRUCTION DIVISION ===================== */
+  /* =========================
+     CONSTRUCTION DIVISION (28)
+  ========================= */
 
   {
-    id: 101,
+    id: 15,
     division: "Construction",
     name: "Siddhivinayak Shree",
-    units: {
-      residential: 440,
-      commercial: 40,
-    },
-    partnership: "Joint Venture",
-    turnoverINRMillion: 750,
-    status: "Completed",
-    media: {
-      images: [
-        "/projects/siddhivinayak-shree/1.jpg",
-        "/projects/siddhivinayak-shree/2.jpg",
-      ],
-      brochure: "/projects/siddhivinayak-shree/brochure.pdf",
-    },
+    units: { Residential: 440, Commercial: 40 },
+    turnover: "INR 750 Million",
+    status: "100% Complete",
+    media: { 
+     images: [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1572120360610-d971b9d7767c?auto=format&fit=crop&w=1200&q=80"    ],
+     brochure: "" },
   },
   {
-    id: 102,
+    id: 16,
     division: "Construction",
     name: "Siddhivinayak Gold",
-    units: { residential: 88 },
-    partnership: "Joint Venture",
-    turnoverNote: "Included in Siddhivinayak Shree",
-    status: "Completed",
-    media: { images: [], brochure: "" },
+    units: { Residential: 88 },
+    turnover: "Included",
+    status: "100% Complete",
+    media: { images: [
+        "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80"
+    ], brochure: "" },
   },
   {
-    id: 103,
+    id: 17,
     division: "Construction",
     name: "Siddhivinayak Kangan",
-    units: { residential: 72 },
-    partnership: "Joint Venture",
-    turnoverNote: "Included in Siddhivinayak Shree",
-    status: "Completed",
-    media: { images: [], brochure: "" },
+    units: { Residential: 72 },
+    turnover: "Included",
+    status: "100% Complete",
+    media: { 
+           images: [
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1200&q=80"
+    ],
+         brochure: "" },
   },
   {
-    id: 104,
+    id: 18,
+    division: "Construction",
+    name: "Siddhivinayak Crown",
+    units: { Units: 72 },
+    turnover: "Included",
+    status: "100% Complete",
+    media: { 
+    images: [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1593696140826-c58b021acf8b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80"
+    ],        brochure: "" },
+  },
+  {
+    id: 19,
     division: "Construction",
     name: "Sunshree Woods",
-    units: { commercial: 66 },
-    partnership: "Joint Venture",
-    turnoverINRMillion: 200,
-    status: "Completed",
-    media: { images: [], brochure: "" },
+    units: { Commercial: 66 },
+    turnover: "INR 200 Million",
+    status: "100% Complete",
+    media: {
+    images: [
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80"
+    ],          brochure: "" },
   },
   {
-    id: 105,
+    id: 20,
     division: "Construction",
     name: "Jai Ganesh Vishwa",
-    units: {
-      residential: 52,
-      commercial: 242,
-    },
-    partnership: "Joint Venture",
-    turnoverINRMillion: 250,
-    status: "Completed",
-    media: { images: [], brochure: "" },
+    units: { Residential: 52, Commercial: 242 },
+    turnover: "INR 250 Million",
+    status: "100% Complete",
+    media: { 
+    images: [
+      "https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
+    ],         brochure: "" },
   },
   {
-    id: 106,
+    id: 21,
+    division: "Construction",
+    name: "Sunshree Suntec",
+    units: { Residential: 35, Commercial: 53 },
+    turnover: "INR 100 Million",
+    status: "100% Complete",
+    media: { images: ["/assets/suntec.png"], brochure: "/assets/Suntec.pdf" },
+  },
+  {
+    id: 22,
     division: "Construction",
     name: "Roman Hills",
-    units: { residential: 32 },
-    unitType: "Row House",
-    partnership: "Joint Venture",
-    turnoverINRMillion: 150,
-    status: "Completed",
-    media: { images: [], brochure: "" },
+    units: { Residential: 32 },
+    turnover: "INR 150 Million",
+    status: "100% Complete",
+    media: { images: 
+        ["/assets/Roman Hills 1.jpg.jpeg",
+        "/assets/Roman Hills.avif"
+        ], brochure: "" },
   },
   {
-    id: 107,
+    id: 23,
     division: "Construction",
     name: "Greens",
-    units: {
-      flats: 62,
-      rowHouses: 16,
-    },
-    partnership: "Joint Venture",
-    turnoverINRMillion: 200,
-    status: "95% Completed",
+    units: { Flats: 62, RowHouses: 16 },
+    turnover: "INR 200 Million",
+    status: "95% Complete",
+    media: { images: ["/assets/SolapurProjectGreens.jpeg"], brochure: "" },
+  },
+  {
+    id: 24,
+    division: "Construction",
+    name: "Siddhivinayak Plaza (Selu)",
+    units: { Commercial: 96 },
+    turnover: "INR 100 Million",
+    status: "90% Complete",
+    media: { 
+    images: [
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+    ],         brochure: "" },
+  },
+  {
+    id: 25,
+    division: "Construction",
+    name: "Emirates Hills",
+    units: { OpenPlots: 203 },
+    turnover: "INR 750 Million",
+    status: "100% Complete",
+    media: { images: ["/assets/emitates.png"], brochure: "/assets/EMIRATES HILL.pdf" },
+  },
+  {
+    id: 26,
+    division: "Construction",
+    name: "Shree Saakshi Sambhav Platinum",
+    units: { BungalowPlots: 57 },
+    turnover: "INR 120 Million",
+    status: "60% Complete",
     media: { images: [], brochure: "" },
   },
   {
-    id: 108,
+    id: 27,
     division: "Construction",
-    name: "Emirates Hills",
-    units: {
-      plots: 203,
-      commercialSqFt: 100000,
-    },
-    description:
-      "52-acre township with plots, amenities, clubhouse, gardens & roads",
-    turnoverINRMillion: 750,
+    name: "M.S. Jainy Developers",
+    units: { Residential: 30 },
+    turnover: "INR 50 Million",
+    status: "100% Complete",
+    media: { images: [], brochure: "" },
+  },
+  {
+    id: 28,
+    division: "Construction",
+    name: "Emerald County Resort & Club",
+    turnover: "INR 300 Million",
+    status: "100% Complete",
+    media: { images: [], brochure: "/assets/EMERALD COUNTY.pdf" },
+  },
+  {
+    id: 29,
+    division: "Construction",
+    name: "Shree Siddhivinayak Park",
+    units: { Residential: 400 },
+    turnover: "INR 600 Million",
+    status: "70% Complete",
+    media: { images: [], brochure: "" },
+  },
+  {
+    id: 30,
+    division: "Construction",
+    name: "Crossroads",
+    units: { Commercial: 70 },
+    turnover: "INR 600 Million",
+    status: "100% Complete",
+    media: { images: [], brochure: "" },
+  },
+  {
+    id: 31,
+    division: "Construction",
+    name: "Vinayak Hills",
+    units: { Residential: 320 },
+    turnover: "INR 600 Million",
+    status: "80% Complete",
+    media: { images: [], brochure: "/assets/VINAYAK HILL.pdf" },
+  },
+  {
+    id: 32,
+    division: "Construction",
+    name: "Bollywood Hills I",
+    units: { Plots: 57 },
+    turnover: "INR 125 Million",
+    status: "100% Complete",
+    media: { images: [], brochure: "/assets/Bollywood Hills Brochure.pdf" },
+  },
+  {
+    id: 33,
+    division: "Construction",
+    name: "Bollywood Hills II",
+    units: { Plots: 46 },
+    turnover: "INR 85 Million",
+    status: "100% Complete",
+    media: { images: [], brochure: "/assets/BOLLYWOOD HILLS.pdf" },
+  },
+  {
+    id: 34,
+    division: "Construction",
+    name: "Siddhivinayak Eco Energy",
+    status: "In Progress",
+    media: { images: [], brochure: "" },
+  },
+  {
+    id: 35,
+    division: "Construction",
+    name: "Lake Villas",
+    units: { Plots: 18 },
+    turnover: "INR 120 Million",
     status: "Completed",
     media: { images: [], brochure: "" },
   },
+  {
+    id: 36,
+    division: "Construction",
+    name: "Emerald Villas",
+    areaSqFt: 225000,
+    turnover: "INR 750 Million",
+    status: "Completed",
+    media: { images: [], brochure: "/assets/Emerald Villas Brochure 2.pdf" },
+  },
+  {
+    id: 37,
+    division: "Construction",
+    name: "Emerald Hill View Villas",
+    areaSqFt: 68000,
+    turnover: "INR 200 Million",
+    status: "Completed",
+    media: { images: [], brochure: "" },
+  },
+  {
+    id: 38,
+    division: "Construction",
+    name: "Emerald Avenue Villas",
+    areaSqFt: 55000,
+    turnover: "INR 450 Million",
+    status: "Completed",
+    media: { images: [], brochure: "" },
+  },
+  {
+    id: 39,
+    division: "Construction",
+    name: "Emerald Valley",
+    areaSqFt: 150000,
+    turnover: "INR 400 Million",
+    status: "Completed",
+    media: { images: [], brochure: "" },
+  },
+  {
+    id: 40,
+    division: "Construction",
+    name: "Bollywood Hills III",
+    units: { Plots: 24 },
+    turnover: "INR 90 Million",
+    status: "95% Complete",
+    media: { images: [], brochure: "" },
+  },
 
-  /* ===================== OTHER BUSINESSES ===================== */
+  /* =========================
+     OTHER BUSINESS PROJECTS
+  ========================= */
 
   {
-    id: 201,
+    id: 41,
     division: "Other",
     name: "Zantic Agro Private Limited",
-    projectType: "Vermicompost & Organic Fertilizer Manufacturing",
-    location: "Burkegaon, Taluka Haveli, Pune",
     status: "Operational",
     media: { images: [], brochure: "" },
   },
   {
-    id: 202,
+    id: 42,
     division: "Other",
     name: "Aloeshell Pharmaa LLP",
-    projectType:
-      "Pharmaceutical & Nutraceutical Manufacturing (200+ products)",
-    location: "Pune, Maharashtra",
     status: "Operational",
     media: { images: [], brochure: "" },
   },

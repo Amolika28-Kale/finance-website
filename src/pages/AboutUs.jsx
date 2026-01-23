@@ -22,13 +22,13 @@ export default function AboutUs() {
 
       {/* ================= HERO ================= */}
       <section className="relative px-4 sm:px-6 py-28 sm:py-36">
-        <div
+        {/* <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
               "url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1800&auto=format&fit=crop)",
           }}
-        />
+        /> */}
         <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/90 to-white" />
 
         <motion.div {...fadeUp} className="relative max-w-5xl mx-auto text-center">
@@ -132,7 +132,7 @@ export default function AboutUs() {
           {/* Founder Image */}
           <motion.img
             {...fadeUp}
-            src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=1200&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1713946598467-fcf9332c56ea?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWFuYWdlcnxlbnwwfHwwfHx8MA%3D%3D"
             alt="CMD Message"
             className="rounded-[2.5rem] shadow-xl object-cover w-full h-[420px]"
           />
@@ -225,61 +225,161 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* ================= TRACK RECORD ================= */}
-      <section className="px-4 sm:px-6 py-28">
-        <div className="max-w-6xl mx-auto text-center">
+{/* ================= TRACK RECORD ================= */}
+<section className="relative px-4 sm:px-6 py-32 overflow-hidden">
 
-          <motion.h2 {...fadeUp} className="text-3xl sm:text-4xl font-black mb-10">
-            Track Record
-          </motion.h2>
+  {/* Background Accent */}
+  <div className="absolute inset-0 bg-gradient-to-br from-softGold/40 via-white to-white" />
+  <div className="absolute -top-24 -right-24 w-96 h-96 bg-brandGold/10 rounded-full blur-3xl" />
+  <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-brandGold/10 rounded-full blur-3xl" />
 
-          <motion.p {...fadeUp} className="text-brandGold text-5xl sm:text-6xl font-black mb-6">
-            10+ Million Sq. Ft.
-          </motion.p>
+  <div className="relative max-w-6xl mx-auto text-center">
 
-          <motion.p {...fadeUp} className="max-w-4xl mx-auto text-brandBlue/80">
-            Developed across residential and commercial projects in Pune,
-            consistently setting benchmarks in quality, design, and execution.
-          </motion.p>
-        </div>
-      </section>
+    {/* Heading */}
+    <motion.h2
+      {...fadeUp}
+      className="text-3xl sm:text-4xl font-black mb-6"
+    >
+      Our Track Record
+    </motion.h2>
 
-      {/* ================= GROUP COMPANIES ================= */}
-      <section className="px-4 sm:px-6 py-28 bg-softGold/30">
-        <div className="max-w-6xl mx-auto">
-          <motion.h2 {...fadeUp} className="text-3xl sm:text-4xl font-black mb-16 text-center">
-            Group Companies
-          </motion.h2>
+    {/* Big Number */}
+    <motion.p
+      {...fadeUp}
+      className="text-brandGold text-5xl sm:text-7xl font-black mb-4 tracking-tight"
+    >
+      10+ Million Sq. Ft.
+    </motion.p>
 
-          <motion.div {...fadeUp} className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 text-brandBlue/80 text-sm sm:text-base">
-            {[
-              "Sambhav Royal Developers",
-              "Siddhivinayak Rameshwar Developers",
-              "Siddhivinayak Namrata Developers",
-              "Siddhivinayak Kohinoor Developers",
-              "Shaashwat Sambhav Developers",
-              "Siddhi Sambhav Developers",
-              "Shree Siddhi Sambhav Developers",
-              "Shree Sambhav Developers",
-              "Jainy Associates",
-              "Shree Saakshi Sambhav Platinum Developers",
-              "Vinayak Promoters And Builders",
-              "Vishwaraj Construction",
-              "RK Developers",
-              "SRK Promoters & Builders",
-              "Zantic Agro Private Limited",
-              "Aloeshell Pharmaa LLP",
-            ].map((name, i) => (
-              <div
-                key={i}
-                className="bg-white border rounded-xl px-6 py-4 shadow-sm"
-              >
-                {name}
-              </div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+    <motion.p
+      {...fadeUp}
+      className="max-w-4xl mx-auto text-brandBlue/80 mb-16 text-sm sm:text-base"
+    >
+      Developed across residential and commercial projects in Pune, consistently
+      setting benchmarks in quality, design, and execution.
+    </motion.p>
+
+    {/* Stats Grid */}
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={{
+        visible: { transition: { staggerChildren: 0.15 } },
+      }}
+      className="grid gap-6 sm:grid-cols-3 max-w-4xl mx-auto"
+    >
+      {[
+        { value: "30+", label: "Years of Excellence" },
+        { value: "70+", label: "Completed Projects" },
+        { value: "10+", label: "Landmark Locations" },
+      ].map((item, i) => (
+        <motion.div
+          key={i}
+          variants={{
+            hidden: { opacity: 0, y: 30 },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.6, ease: "easeOut" },
+            },
+          }}
+          whileHover={{ y: -6 }}
+          className="bg-white/90 backdrop-blur border border-brandGold/20 
+                     rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all"
+        >
+          <p className="text-4xl font-black text-brandGold mb-2">
+            {item.value}
+          </p>
+          <p className="text-sm text-brandBlue/70 font-medium">
+            {item.label}
+          </p>
+        </motion.div>
+      ))}
+    </motion.div>
+  </div>
+</section>
+
+  {/* ================= GROUP COMPANIES ================= */}
+<section className="px-4 sm:px-6 py-28 bg-gradient-to-b from-softGold/40 to-white">
+  <div className="max-w-6xl mx-auto">
+
+    {/* Heading */}
+    <motion.h2
+      {...fadeUp}
+      className="text-3xl sm:text-4xl font-black mb-6 text-center"
+    >
+      Group Companies
+    </motion.h2>
+
+    <motion.p
+      {...fadeUp}
+      className="max-w-3xl mx-auto text-center text-brandBlue/70 mb-14 text-sm sm:text-base"
+    >
+      A diverse portfolio of trusted entities operating across real estate,
+      construction, infrastructure, and allied businesses.
+    </motion.p>
+
+    {/* Cards */}
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={{
+        visible: { transition: { staggerChildren: 0.08 } },
+      }}
+      className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
+    >
+      {[
+        "Sambhav Royal Developers",
+        "Siddhivinayak Rameshwar Developers",
+        "Siddhivinayak Namrata Developers",
+        "Siddhivinayak Kohinoor Developers",
+        "Shaashwat Sambhav Developers",
+        "Siddhi Sambhav Developers",
+        "Shree Siddhi Sambhav Developers",
+        "Shree Sambhav Developers",
+        "Jainy Associates",
+        "Shree Saakshi Sambhav Platinum Developers",
+        "Vinayak Promoters And Builders",
+        "Vishwaraj Construction",
+        "RK Developers",
+        "SRK Promoters & Builders",
+        "Zantic Agro Private Limited",
+        "Aloeshell Pharmaa LLP",
+      ].map((name, i) => (
+        <motion.div
+          key={i}
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.5, ease: "easeOut" },
+            },
+          }}
+          whileHover={{ y: -6, scale: 1.02 }}
+          className="group relative bg-white/90 backdrop-blur border border-brandGold/20 
+                     rounded-2xl px-6 py-5 shadow-sm hover:shadow-xl transition-all"
+        >
+          {/* Accent line */}
+          <span className="absolute left-0 top-0 h-full w-1 rounded-l-2xl bg-brandGold scale-y-0 group-hover:scale-y-100 transition-transform origin-top" />
+
+          {/* Label */}
+          <span className="block text-xs uppercase tracking-wider text-brandGold mb-1">
+            Group Entity
+          </span>
+
+          {/* Name */}
+          <p className="font-semibold text-brandBlue leading-snug">
+            {name}
+          </p>
+        </motion.div>
+      ))}
+    </motion.div>
+  </div>
+</section>
+
 
     </main>
   );
