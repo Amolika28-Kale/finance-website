@@ -8,6 +8,8 @@ import Investments from "./pages/Investments";
 import Property from "./pages/Property";
 import Pricing from "./pages/Pricing";
 import Contact from "./pages/Contact";
+import AboutUs from "./pages/AboutUs";
+import Projects from "./pages/Projects";
 
 export default function App() {
   return (
@@ -20,6 +22,8 @@ export default function App() {
         <Route path="/property" element={<Property />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<AboutUs/>}/>
+        <Route path="/projects" element={<Projects/>}/>
       </Routes>
       <Footer />
     </div>

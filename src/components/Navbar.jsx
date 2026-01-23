@@ -41,7 +41,8 @@ export default function Navbar() {
           <NavLink to="/investments" className={navItem}>Investments</NavLink>
           <NavLink to="/property" className={navItem}>Property</NavLink>
           <NavLink to="/contact" className={navItem}>Contact</NavLink>
-
+          <NavLink to="/about" className={navItem}>About Us</NavLink> 
+          <NavLink to="/projects" className={navItem}>Our Projects</NavLink>
           <Link
             to="/pricing"
             className="bg-brandGold text-white px-6 py-3 rounded-xl font-semibold hover:opacity-90 shadow-sm transition"
@@ -91,6 +92,8 @@ export default function Navbar() {
                   ["Investments", "/investments"],
                   ["Property", "/property"],
                   ["Contact", "/contact"],
+                  ["About Us", "/about"],
+                  ["Our Projects", "/projects"]
                 ].map(([label, path]) => (
                   <Link
                     key={label}
