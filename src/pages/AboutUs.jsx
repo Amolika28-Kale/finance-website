@@ -132,7 +132,7 @@ export default function AboutUs() {
           {/* Founder Image */}
           <motion.img
             {...fadeUp}
-            src="https://images.unsplash.com/photo-1713946598467-fcf9332c56ea?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWFuYWdlcnxlbnwwfHwwfHx8MA%3D%3D"
+            src="/assets/founder.png"
             alt="CMD Message"
             className="rounded-[2.5rem] shadow-xl object-cover w-full h-[420px]"
           />
