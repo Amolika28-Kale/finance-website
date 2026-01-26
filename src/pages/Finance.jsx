@@ -9,6 +9,7 @@ import {
   Gem,
   ArrowRight,
 } from "lucide-react";
+import Sparkle from "../components/Sparkle";
 
 /* ================= ANIMATIONS ================= */
 const fadeUp = {
@@ -27,45 +28,76 @@ export default function Finance() {
   return (
     <main className="overflow-hidden bg-white text-brandBlue font-sans">
 
-      {/* ================= HERO ================= */}
-      <section className="relative px-4 sm:px-6 py-28 sm:py-36 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=1600&auto=format&fit=crop)",
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/90 to-white" />
+{/* ================= HERO ================= */}
+<section className="relative px-4 sm:px-6 py-24 sm:py-36 overflow-hidden bg-gradient-to-br from-softGold/30 via-white to-softGold/10">
 
-        <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="relative max-w-5xl mx-auto text-center"
-        >
-          <span className="inline-block mb-6 px-6 py-2 rounded-full bg-brandGold/15 text-brandGold text-sm font-semibold">
-            Finance • Loans • Structuring
-          </span>
+  {/* ================= AMBIENT ORBS ================= */}
+  <motion.div
+    animate={{ y: [0, -30, 0] }}
+    transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
+    className="absolute top-16 left-10 w-60 h-60 sm:w-80 sm:h-80 bg-brandGold/25 rounded-full blur-[120px]"
+  />
 
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight">
-            Smart & Structured{" "}
-            <span className="text-brandGold">Finance Solutions</span>
-          </h1>
+  <motion.div
+    animate={{ y: [0, 40, 0] }}
+    transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+    className="absolute bottom-20 right-10 w-72 h-72 sm:w-96 sm:h-96 bg-brandBlue/10 rounded-full blur-[140px]"
+  />
 
-          <p className="max-w-3xl mx-auto text-base sm:text-lg text-brandBlue/80 mb-10">
-            Tailor-made funding solutions for individuals, entrepreneurs, and
-            enterprises — delivered with speed, transparency, and legal clarity.
-          </p>
+  {/* ================= SUBTLE GRID PATTERN ================= */}
+  <div className="absolute inset-0 opacity-[0.04] bg-[linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] bg-[size:40px_40px]" />
 
-          <a
-            href="/pricing"
-            className="inline-flex items-center gap-3 bg-brandBlue text-white px-10 py-4 rounded-full text-lg font-semibold hover:-translate-y-1 hover:shadow-xl transition"
-          >
-            Consult @ ₹499 <ArrowRight />
-          </a>
-        </motion.div>
-      </section>
+  {/* ================= SPARKLES (DESKTOP ONLY) ================= */}
+  <div className="absolute inset-0 pointer-events-none hidden sm:block">
+    <Sparkle size={14} delay={0} className="top-28 left-1/3" />
+    <Sparkle size={10} delay={1.6} className="top-1/2 right-32" />
+    <Sparkle size={8} delay={2.8} className="bottom-24 left-24" />
+  </div>
+
+  {/* ================= CONTENT ================= */}
+  <motion.div
+    initial={{ opacity: 0, y: 60 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 1 }}
+    className="relative max-w-5xl mx-auto text-center"
+  >
+
+    {/* Badge */}
+    <span className="inline-flex items-center gap-2 mb-6 px-6 py-2 rounded-full bg-white/80 backdrop-blur border shadow text-brandGold text-sm font-semibold">
+      Finance • Loans • Structuring
+    </span>
+
+    {/* Heading */}
+    <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight">
+      Smart & Structured{" "}
+      <span className="text-brandGold">Finance Solutions</span>
+    </h1>
+
+    {/* Description */}
+    <p className="max-w-3xl mx-auto text-base sm:text-lg text-brandBlue/80 mb-10">
+      Tailor-made funding solutions for individuals, entrepreneurs, and
+      enterprises — delivered with speed, transparency, and legal clarity.
+    </p>
+
+    {/* CTA */}
+    <motion.a
+      href="/pricing"
+      whileHover={{ y: -6 }}
+      whileTap={{ scale: 0.97 }}
+      className="inline-flex items-center gap-3 bg-brandBlue text-white px-8 sm:px-10 py-4 rounded-full text-base sm:text-lg font-semibold shadow-lg hover:shadow-2xl transition"
+    >
+      Consult @ ₹499 <ArrowRight />
+    </motion.a>
+
+    {/* Micro trust text */}
+    <p className="mt-6 text-sm text-brandBlue/60">
+      Secure • Asset-Backed • Fully Compliant
+    </p>
+
+  </motion.div>
+</section>
+
 
 {/* ================= LOAN SOLUTIONS ================= */}
 <section className="px-4 sm:px-6 py-28 bg-white">
@@ -380,16 +412,6 @@ export default function Finance() {
             Get Started @ ₹499 <ArrowRight />
           </a>
         </motion.div>
-      </section>
-
-      {/* ================= DISCLAIMER ================= */}
-      <section className="px-6 py-10">
-        <div className="max-w-5xl mx-auto text-center text-sm text-brandBlue/60">
-          <p>
-            *All finance solutions are subject to due diligence, legal
-            verification, and applicable institutional approvals.
-          </p>
-        </div>
       </section>
 
     </main>
